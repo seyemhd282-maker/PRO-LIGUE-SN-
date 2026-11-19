@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEN PRO LEAGUE 🇸🇳</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#071b14;color:white;font-family:Arial,sans-serif}
+header{background:#04110c;padding:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.logo{font-size:23px;font-weight:bold;color:#c8f169}
+nav{display:flex;gap:15px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:13px;font-weight:bold}
+nav a:hover{color:#c8f169}
+.hero{
+min-height:450px;padding:80px 7%;
+display:flex;align-items:center;
+background:linear-gradient(90deg,#03120ceF,#03120c55),
+url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1800&q=85') center/cover;
+}
+.hero h1{font-size:clamp(45px,8vw,85px);margin:0;text-transform:uppercase}
+.hero h1 span{color:#c8f169}
+.hero p{max-width:520px;line-height:1.7}
+.btn{display:inline-block;background:#c8f169;color:#071b14;padding:14px 20px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:15px}
+.ticker{background:#c8f169;color:#071b14;padding:13px;text-align:center;font-weight:bold}
+section{padding:45px 5%}
+h2{font-size:34px;text-transform:uppercase}
+.tabs{display:flex;gap:10px;margin:20px 0}
+.tabs button{padding:13px 25px;border:0;border-radius:8px;background:#18372a;color:white;font-weight:bold;cursor:pointer}
+.tabs button.active{background:#c8f169;color:#071b14}
+.panel{background:#10271e;border:1px solid #294638;border-radius:12px;overflow:hidden}
+table{width:100%;border-collapse:collapse}
+th,td{padding:14px 10px;text-align:left;border-bottom:1px solid #294638;font-size:13px}
+th{color:#c8f169;background:#0b2118}
+.points{color:#c8f169;font-weight:bold}
+.hidden{display:none}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{background:#10271e;border-radius:12px;overflow:hidden;border:1px solid #294638}
+.card img{width:100%;height:150px;object-fit:cover}
+.card div{padding:15px}
+.card h3{color:#c8f169}
+.match{display:flex;justify-content:space-between;align-items:center;padding:18px;border-bottom:1px solid #294638;gap:10px}
+.score{font-size:22px;color:#c8f169;font-weight:bold}
+footer{text-align:center;background:#04110c;padding:30px;color:#a9b9b0}
+@media(max-width:600px){
+header{gap:15px}
+nav{gap:10px}
+.hero{padding:65px 6%}
+.hero p{font-size:13px}
+th,td{padding:10px 5px;font-size:11px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">⚽ SEN PRO LEAGUE</div>
+<nav>
+<a href="#accueil">ACCUEIL</a>
+<a href="#classements">CLASSEMENTS</a>
+<a href="#matchs">MATCHS</a>
+<a href="#buteurs">BUTEURS</a>
+<a href="#actus">ACTUALITÉS</a>
+<a href="#clubs">CLUBS</a>
+</nav>
+</header>
+
+<div class="hero" id="accueil">
+<div>
+<p>🇸🇳 LE FOOTBALL SÉNÉGALAIS AU PREMIER PLAN</p>
+<h1>NOTRE FOOTBALL.<br><span>NOTRE FIERTÉ.</span></h1>
+<p>La plateforme des Ligues 1 et 2 sénégalaises. Résultats, classements, buteurs, clubs et actualités.</p>
+<a href="#classements" class="btn">DÉCOUVRIR LES CHAMPIONNATS →</a>
+</div>
+</div>
+
+<div class="ticker">
+🇸🇳 SAISON 2026-2027 • LIGUE 1 • LIGUE 2 • FOOTBALL SÉNÉGALAIS
+</div>
+<section id="classements">
+<h2>🏆 Classements</h2>
+
+<div class="tabs">
+<button id="btn1" class="active" onclick="showLeague('l1')">LIGUE 1</button>
+<button id="btn2" onclick="showLeague('l2')">LIGUE 2</button>
+</div>
+
+<div class="panel" id="l1">
+<h3 style="padding:15px">LIGUE 1 SÉNÉGALAISE</h3>
+<table>
+<tr><th>#</th><th>CLUB</th><th>J</th><th>PTS</th></tr>
+<tr><td>1</td><td>US Gorée</td><td>5</td><td class="points">13</td></tr>
+<tr><td>2</td><td>ASC Jaraaf</td><td>5</td><td class="points">11</td></tr>
+<tr><td>3</td><td>ASC HLM</td><td>5</td><td class="points">10</td></tr>
+<tr><td>4</td><td>AJEL Rufisque</td><td>5</td><td class="points">9</td></tr>
+<tr><td>5</td><td>Diambars FC</td><td>5</td><td class="points">8</td></tr>
+<tr><td>6</td><td>Guédiawaye FC</td><td>5</td><td class="points">8</td></tr>
+<tr><td>7</td><td>Wally Daan</td><td>5</td><td class="points">7</td></tr>
+<tr><td>8</td><td>AS Pikine</td><td>5</td><td class="points">6</td></tr>
+</table>
+</div>
+
+<div class="panel hidden" id="l2">
+<h3 style="padding:15px">LIGUE 2 SÉNÉGALAISE</h3>
+<table>
+<tr><th>#</th><th>CLUB</th><th>J</th><th>PTS</th></tr>
+<tr><td>1</td><td>Guelwaars FC</td><td>4</td><td class="points">12</td></tr>
+<tr><td>2</td><td>Jamono Fatick</td><td>3</td><td class="points">7</td></tr>
+<tr><td>3</td><td>AS Bambey</td><td>4</td><td class="points">7</td></tr>
+<tr><td>4</td><td>Amitié FC</td><td>4</td><td class="points">6</td></tr>
+</table>
+</div>
+
+<p style="color:#a9b9b0;font-size:12px">
+Classements partiels à vérifier auprès des sources officielles.
+</p>
+</section>
+<section id="matchs">
+<h2>⚽ Résultats des matchs</h2>
+<div class="panel">
+<div class="match"><b>ASC HLM</b><span class="score">0 - 1</span><b>US Gorée</b></div>
+<div class="match"><b>Diambars</b><span class="score">4 - 1</span><b>Stade Mbour</b></div>
+<div class="match"><b>ASC Jaraaf</b><span class="score">1 - 0</span><b>Teungueth FC</b></div>
+<div class="match"><b>AS Pikine</b><span class="score">2 - 1</span><b>US Ouakam</b></div>
+</div>
+</section>
+
+<section id="buteurs">
+<h2>🥇 Meilleurs buteurs</h2>
+<div class="cards">
+<div class="card"><div><h3>Cheikh Cherif Gueye</h3><p>Diambars FC</p><b>4 buts</b></div></div>
+<div class="card"><div><h3>Ibrahima Dione</h3><p>ASC HLM</p><b>3 buts</b></div></div>
+<div class="card"><div><h3>Pape Cheikh Badiane</h3><p>US Gorée</p><b>2 buts</b></div></div>
+</div>
+</section>
+
+<section id="actus">
+<h2>📰 Actualités</h2>
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80" alt="Football">
+<div>
+<h3>La nouvelle saison est lancée</h3>
+<p>La saison 2026-2027 des championnats sénégalais a débuté le 17 octobre.</p>
+<a href="https://wiwsport.com/" target="_blank">Lire les actualités →</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=700&q=80" alt="Ballon de football">
+<div>
+<h3>La Ligue 2 à l'honneur</h3>
+<p>Découvrez les clubs et les talents de la deuxième division.</p>
+<a href="https://www.score.sn/" target="_blank">Voir les informations →</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=700&q=80" alt="Joueurs de football">
+<div>
+<h3>Le football local avance</h3>
+<p>Suivez les performances de nos clubs sénégalais.</p>
+<a href="https://www.galsenfoot.sn/" target="_blank">En savoir plus →</a>
+</div>
+</div>
+
+</div>
+</section>
+<section id="clubs">
+<h2>🛡️ Nos clubs</h2>
+<div class="cards">
+<div class="card"><div><h3>US Gorée</h3><p>Ligue 1</p></div></div>
+<div class="card"><div><h3>ASC Jaraaf</h3><p>Ligue 1</p></div></div>
+<div class="card"><div><h3>AJEL Rufisque</h3><p>Ligue 1</p></div></div>
+<div class="card"><div><h3>Diambars FC</h3><p>Ligue 1</p></div></div>
+<div class="card"><div><h3>Guelwaars FC</h3><p>Ligue 2</p></div></div>
+<div class="card"><div><h3>Jamono Fatick</h3><p>Ligue 2</p></div></div>
+</div>
+</section>
+
+<footer>
+<h2>SEN PRO LEAGUE 🇸🇳</h2>
+<p>La passion du football sénégalais.</p>
+<p>© 2026 SEN PRO LEAGUE</p>
+</footer>
+
+<script>
+function showLeague(id){
+document.getElementById('l1').classList.toggle('hidden',id!=='l1');
+document.getElementById('l2').classList.toggle('hidden',id!=='l2');
+
+document.getElementById('btn1').classList.toggle('active',id==='l1');
+document.getElementById('btn2').classList.toggle('active',id==='l2');
+}
+</script>
+
+</body>
+</html>
